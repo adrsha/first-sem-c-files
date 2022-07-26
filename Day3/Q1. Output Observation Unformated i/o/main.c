@@ -6,7 +6,7 @@ int main()
     printf("Using scanf without a space: \n");
     scanf("%c", &ch);
 
-    // fflush(stdin);
+    fflush(stdin);
     printf("Using scanf with a space: \n");
     scanf("%c", &ch);
     // printf("Using getcha: \n");
