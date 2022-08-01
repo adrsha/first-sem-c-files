@@ -1,0 +1,13 @@
+7. Arrays are homogenous and structures are heterogeneous
+Arrays cannot be passsed through functions but structures can.
+Syntax
+    datatype identifier[size_of_array]
+    struct STRUCTURE_NAME { datatype members };
+    struct STRUCTURE_NAME structure_variable;
+Structures allows us to create a custom datatype, but arrays rely on the fundamental datatypes.
+
+8.
+
+9. "a" = > appending (At the end)
+   "w" = > writing (overwritten)
+   "r" = > reading 

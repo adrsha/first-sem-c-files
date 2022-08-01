@@ -1,0 +1,23 @@
+1. A program is a set of instructions that is used to perform a specific task.
+    Different types of programming languages are: 
+    Low level language
+        Machine level
+            Binary (1010101)
+        
+        Assembly level  
+            Same as machine language but each instruction and variable have a symbol.
+
+    High level language 
+        Procedural Oriented:
+            Step by step. Fortran
+        Problem Oriented :
+            specific problem. (Object Oriented) Based on DBMS
+
+    Natural language
+        They are used in AI.
+
+2a Ternary operator is the operator that takes in 3 operands. There is only one ternary operator. It is
+Preprocessor directives are the parts of the program that get processed before the actual program. They are written by preceding them with a # symbol.
+
+Keywords are the specially reserved words with their own special meaning and purpose.
+
