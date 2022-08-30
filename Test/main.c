@@ -1,46 +1,49 @@
 #include <stdio.h>
-struct employee
-{
-    char name[20];
-    int age, salary;
-} e[3];
-void sort(struct employee[], int);
-
 int main()
 {
-    int i;
-
+    int i, j, k;
+    int a[3][3];
+    int least = a[0][0];
     for (i = 0; i < 3; i++)
     {
-        printf("Enter employee %d name age and salary: ", i + 1);
-        scanf("%s%d%d", &e[i].name, &e[i].age, &e[i].salary);
-    }
-    sort(e, 3);
-
-    printf("The sorted list is : ");
-    for (i = 0; i < 3; i++)
-    {
-        printf("Employee %d \n", i);
-        printf("Name: %s, Age: %d Salary: %d ", e[i].name, e[i].age, e[i].salary);
-    }
-
-    return 0;
-}
-
-void sort(struct employee e[], int n)
-{
-    int i, j;
-    struct employee t;
-    for (i = 0; i < n - 1; i++)
-    {
-        for (j = i + 1; j < n; j++)
+        for (j = 0; j < 3; j++)
         {
-            if (e[i].salary > e[j].salary)
+            scanf("%d", (*(a + i) + j));
+        }
+    }
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (*(*(a + i) + j) < least)
             {
-                t = e[i];
-                e[i] = e[j];
-                e[j] = t;
+                least = *(*(a + i) + j);
             }
         }
     }
+    printf("%d is the least value of matrix\n", least);
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (i == j)
+            {
+                *(*(a + i) + j) = least;
+            }
+            if ((i + j) == 2)
+            {
+                *(*(a + i) + j) = least;
+            }
+        }
+    }
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d ", *(*(a + i) + j));
+        }
+        printf("\n");
+    }
+    return 0;
 }
