@@ -1,26 +1,46 @@
 #include <stdio.h>
-#include <stdlib.h>
+struct employee
+{
+    char name[20];
+    int age, salary;
+} e[3];
+void sort(struct employee[], int);
 
 int main()
 {
-    int n, i, num, num1;
-    FILE *p, *pe;
-    p = fopen("numbers.txt", "w+");
+    int i;
 
-    printf("Enter the number of numbers you want to input.");
-    scanf("%d", &n);
-
-    for (i = 0; i < n; i++)
+    for (i = 0; i < 3; i++)
     {
-        scanf("%d", &num);
-        fprintf(p, "%d\n", &num);
+        printf("Enter employee %d name age and salary: ", i + 1);
+        scanf("%s%d%d", &e[i].name, &e[i].age, &e[i].salary);
     }
-    rewind(p);
-    while (fscanf(p, "%d", &num1) != EOF)
+    sort(e, 3);
+
+    printf("The sorted list is : ");
+    for (i = 0; i < 3; i++)
     {
-        if (num1 % 2 == 0)
+        printf("Employee %d \n", i);
+        printf("Name: %s, Age: %d Salary: %d ", e[i].name, e[i].age, e[i].salary);
+    }
+
+    return 0;
+}
+
+void sort(struct employee e[], int n)
+{
+    int i, j;
+    struct employee t;
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = i + 1; j < n; j++)
         {
-            fprintf(pe, "%d")
+            if (e[i].salary > e[j].salary)
+            {
+                t = e[i];
+                e[i] = e[j];
+                e[j] = t;
+            }
         }
     }
 }

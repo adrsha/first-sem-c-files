@@ -4,7 +4,7 @@ void main(void)
 {
     int n, i;
     float *address;
-    printf("Enter no of elements: ");
+    printf("Enter no of elements");
     scanf("%d", &n);
     address = (float *)calloc(n, sizeof(float));
     // using calloc function to allocate memory for n number of float member
@@ -15,7 +15,7 @@ void main(void)
     }
     for (i = 0; i < n; i++)
     {
-        printf("\n Address of %d block %d", i, address + i);
+        printf("\n Address of %dth block %d", i + 1, address + i);
     }
 
     free(address); // to deallocate memory
