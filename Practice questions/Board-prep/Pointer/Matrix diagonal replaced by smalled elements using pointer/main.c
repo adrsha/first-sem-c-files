@@ -24,7 +24,7 @@ int main()
 
     for (k = 0; k < 3; k++)
     {
-        small[k] = b[0, 0];
+        small[k] = b[0][0];
         for (i = 0; i < m; i++)
         {
             for (j = 0; j < n; j++)
@@ -66,6 +66,5 @@ int main()
         }
         printf("\n");
     }
-
     return 0;
 }
